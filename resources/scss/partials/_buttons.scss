@@ -1,0 +1,77 @@
+@import "_color";
+/***********************************************
+** BUTTONS
+***********************************************/
+.btn {
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    color: $white;
+    letter-spacing: 2px;
+    border: 3px solid $white;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.4s ease-in-out, border 0.4s ease-in-out;
+    
+    &:hover {
+        color: $black;
+        border: 3px solid $yellow;
+    }
+    
+    &:before {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: -120%;
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-color: $yellow;
+        transition: all 0.4s ease-in-out;
+    }
+    
+    &:hover:before {
+        left: 0;
+    }
+}
+
+.btn-big {
+    padding: 20px 50px;
+    font-size: 180%;
+}
+
+.btn-small {
+    padding: 15px 30px;
+    margin-right: 20px;
+    border-radius: 5px;
+    
+    &:last-child {
+        margin-right: 0px;
+    }
+}
+
+@for $i from 0 through 2 {
+    #btn-#{$i} {
+        @if $i == 1 {
+            animation-delay: 0.1s;
+        } @else {
+            animation-delay: ($i / 10) * 2s;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

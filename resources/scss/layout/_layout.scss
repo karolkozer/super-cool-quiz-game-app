@@ -1,0 +1,100 @@
+%textBox {
+    width: 650px;
+    margin: 0 auto;
+}
+
+/***********************************************
+** SECTION HOME
+***********************************************/
+.section-home {
+    text-align: center;
+    @include section(0px, 0px, block);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    
+    .btn {
+        margin-top: 40px;
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    }
+}
+
+/***********************************************
+** SECTION GAME
+***********************************************/
+.section-game {
+    text-align: center;
+    @include section(200px, 100px, none);
+    
+    .text-box {
+        @extend %textBox;
+        background-color: $yellow;
+        color: $black;
+        padding: 3px;
+        margin-bottom: 50px;
+        border-radius: 45px;
+    }
+    
+    .btn-box {
+        width: 850px;
+        margin: 0 auto;
+        
+    }
+}
+
+/***********************************************
+** SECTION GAME
+***********************************************/
+.section-game-result {
+    text-align: center;
+    @include section(200px, 100px, none);
+    
+    .text-box-result {
+        @extend %textBox;
+        width: 800px;
+    }
+
+}
+
+
+/***********************************************
+** MODAL
+***********************************************/
+%overlay {
+    display: none;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.overlay-reward {
+    @extend %overlay;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    
+    .reward-content {
+        width: 860px;
+        height: 100%;
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+    
+    #video {
+        -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    }
+}

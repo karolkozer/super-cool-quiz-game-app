@@ -1,0 +1,5 @@
+@mixin section($mar, $pad, $display) {
+    margin-top: $mar;
+    padding-top: $pad;
+    display: $display;
+}
